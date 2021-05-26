@@ -1,0 +1,106 @@
+// $base-color: #40e0d0;
+$base-color: #00bfff;
+$secondary-color: #87cefa;
+$color-white: #fff;
+$color-gray: #dcdcdc;
+
+$fonts: Roboto,"Helvetica Neue",sans-serif;
+
+.base-color{
+    background: $base-color;
+}
+.background-white{
+    background: $color-white;
+    position: relative;
+}
+.shadows {
+    -webkit-box-shadow: 10px 10px 5px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 10px 10px 5px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow: 10px 10px 5px #ccc;
+}
+.background-gray{
+    background: $color-gray;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.navber-spacer {
+    flex: 1 1 auto;
+}
+
+.container-fluid{
+    padding: 60px;
+}
+.jumbo-btn{
+    width: 90%;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.user-panel{
+    padding: 20px;
+}
+.user-list-panel{
+    height: calc(100vh - 361px);
+    overflow: auto;
+}
+
+@media (max-width: 979px) {
+    .container-fluid {
+        padding: 30px 0;
+    }
+    .user-panel{
+        padding: 10px;
+    }
+    .user-list-panel{
+        height: calc(100vh - 281px);
+        overflow: auto;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, strong, span, label, em {
+    font-family: $fonts;
+}
+
+.pull-left{
+    float: left !important;
+}
+.pull-right{
+    float: right !important;
+}
+
+.chats{
+    label{
+        padding: 10px 15px 10px 10px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        // background: #1e90ff;
+        
+        font-weight: 600;
+        
+        max-width: 60%;
+        span{
+            font-weight: normal;
+            font-size: 10px;
+            margin-left: 10px;
+            font-style: italic;
+            float: right;
+            margin-top: 5px;
+        }
+    }
+    .current-user{
+        background: $base-color;
+        color: #fff;
+    }
+    .chat-user{
+        background: $secondary-color;
+        color: #000;
+    }
+}

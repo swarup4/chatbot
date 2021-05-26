@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="container base-color" fxLayout="row" fxLayoutAlign="center center">
+    <div class="background-white login-form" fxLayout="column" fxFlex.xl="25" fxFlex.lg="32" fxFlex.md="40"
+        fxFlex.sm="50" fxFlex.xs="80">
+        <div fxLayout="row">
+            <h1>Login</h1>
+        </div>
+        <div fxLayout="row">
+            <form fxFlex fxLayout="column">
+                <div fxLayout="row">
+                    <mat-form-field fxFlex>
+                        <input matInput type="text" [(ngModel)]="user.username" name="username" placeholder="Username"
+                            fxFlex>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field fxFlex>
+                        <input matInput type="password" [(ngModel)]="user.password" name="password"
+                            placeholder="Password">
+                    </mat-form-field>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <button mat-raised-button color="primary" class="jumbo-btn" (click)="login(user)">Login</button>
+                </div>
+                <div fxLayout="row" fxLayoutGap="15px" style="margin-top: 12px;">
+                    <div fxLayout="column" fxLayoutAlign="center left" fxFlex="50">
+                        <button mat-raised-button color="primary" [routerLink]="['/signup']">Sign Up</button>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="center right" fxFlex="50">
+                        <button mat-stroked-button color="primary" class="" (click)="login(user)">Forgot
+                            Password</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
