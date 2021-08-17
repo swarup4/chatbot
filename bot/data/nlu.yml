@@ -90,3 +90,10 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: play_video
+  examples: |
+    - play the video
+    - open the url
+    - open the link in browser
+    - show me the video that I asked for

@@ -6,8 +6,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: action_check_weather
 
 - story: sad path 1
   steps:
@@ -28,3 +26,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: happy play video
+  steps:
+  - intent: play_video
+  - action: open_video

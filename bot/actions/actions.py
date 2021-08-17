@@ -9,16 +9,16 @@
 
 # from typing import Any, Text, Dict, List
 #
+import webbrowser
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 
-class ActionCheckWeather(Action):
+class OpenVideo(Action):
    def name(self):
-      return "action_check_weather"
+      return "open_video"
 
-   def run(self, dispatcher,
-           tracker: Tracker,
-           domain):
-
-      dispatcher.utter_message("Hello World! from custom action")
+   def run(self, dispatcher, tracker: Tracker, domain):
+      video = 'https://youtu.be/Jz28OYKlaLU'
+      dispatcher.utter_message("Opening Video")
+      webbrowser.open(video)
       return []
