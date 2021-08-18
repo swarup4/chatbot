@@ -19,6 +19,6 @@ class OpenVideo(Action):
 
    def run(self, dispatcher, tracker: Tracker, domain):
       video = 'https://youtu.be/Jz28OYKlaLU'
-      dispatcher.utter_message("Opening Video")
-      webbrowser.open(video)
+      dispatcher.utter_message("Opening Video <a href='" + video + "'>click</a>")
+      # webbrowser.open(video)
       return []
